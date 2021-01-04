@@ -1,7 +1,6 @@
 /*eslint-disable*/
 import React from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
+
 // react components for routing our app without refresh
 import { Link } from "react-router-dom";
 
@@ -11,12 +10,14 @@ import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 
 // @material-ui/icons
-import { Apps, CloudDownload } from "@material-ui/icons";
+import { Apps } from "@material-ui/icons";
 
 // core components
 import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
+//css
+import "assets/css/NavLinks.css";
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -32,9 +33,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          <Link to="/" className={classes.link}>
-            Home
-          </Link>
+          <Link to="/">Home</Link>
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
@@ -44,7 +43,12 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          <Link to="/cause-page"> Cause</Link>
+          <Link
+            className="lb_nav_links text-white transparent"
+            to="/cause-page"
+          >
+            Cause
+          </Link>
         </Button>
       </ListItem>
 
@@ -56,7 +60,6 @@ export default function HeaderLinks(props) {
             className: classes.navLink,
             color: "transparent",
           }}
-          buttonIcon={Apps}
           dropdownList={[
             <Link to="/about-page" className={classes.dropdownLink}>
               About Us
@@ -79,9 +82,9 @@ export default function HeaderLinks(props) {
           className={classes.navLink}
           className="btn red"
         >
-          <Link className="white-text" to="/account">
+          <a className="white-text" href="https://livebegins.netlify.app/">
             Donate
-          </Link>
+          </a>
         </Button>
       </ListItem>
     </List>

@@ -75,7 +75,9 @@ export default function LandingPage(props) {
           <TeamSection />
         </div>
       </div>
-      <Footer />
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <Footer />
+      </div>
     </div>
   );
 }

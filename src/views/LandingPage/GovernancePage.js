@@ -64,7 +64,9 @@ export default function GovernacePage(props) {
           <ProductSection />
         </div>
       </div>
-      <Footer />
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <Footer />
+      </div>
     </div>
   );
 }

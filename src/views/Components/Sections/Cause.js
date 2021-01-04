@@ -6,11 +6,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Link } from "react-router-dom";
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
-import List from "@material-ui/icons/List";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import CastForEducationIcon from "@material-ui/icons/CastForEducation";
+import Sanitization from "@material-ui/icons/LocalDrink";
+import Rehab from "@material-ui/icons/SportsKabaddi";
+import Health from "@material-ui/icons/Favorite";
+import Livelihood from "@material-ui/icons/MonetizationOn";
+import Educ from "@material-ui/icons/School";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -18,6 +18,8 @@ import GridItem from "components/Grid/GridItem.js";
 import NavPills from "components/NavPills/NavPills.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
+
+// import Icon from "components/Icons/Icon";
 
 const useStyles = makeStyles(styles);
 
@@ -38,7 +40,7 @@ export default function SectionPills() {
                 tabs={[
                   {
                     tabButton: "Health",
-                    tabIcon: FavoriteIcon,
+                    tabIcon: Health,
                     tabContent: (
                       <span>
                         <p>
@@ -75,7 +77,7 @@ export default function SectionPills() {
                   },
                   {
                     tabButton: "Education",
-                    tabIcon: CastForEducationIcon,
+                    tabIcon: Educ,
                     tabContent: (
                       <span>
                         <p>
@@ -105,7 +107,7 @@ export default function SectionPills() {
                   },
                   {
                     tabButton: "Sanitization",
-                    tabIcon: List,
+                    tabIcon: Sanitization,
                     tabContent: (
                       <span>
                         <p>
@@ -153,7 +155,7 @@ export default function SectionPills() {
                 tabs={[
                   {
                     tabButton: "Rehabilition",
-                    tabIcon: Dashboard,
+                    tabIcon: Rehab,
                     tabContent: (
                       <span>
                         <p>
@@ -190,7 +192,7 @@ export default function SectionPills() {
                   },
                   {
                     tabButton: "Livelihood",
-                    tabIcon: Schedule,
+                    tabIcon: Livelihood,
                     tabContent: (
                       <span>
                         <p>

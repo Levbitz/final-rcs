@@ -19,7 +19,6 @@ import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
 
-import TeamSection from "./Sections/TeamSection.js";
 import Health from "views/Components/Sections/Health.js";
 
 const dashboardRoutes = [];
@@ -61,10 +60,11 @@ export default function WhatWeDoPage(props) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <Health />
-          <TeamSection />
         </div>
       </div>
-      <Footer />
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <Footer />
+      </div>
     </div>
   );
 }

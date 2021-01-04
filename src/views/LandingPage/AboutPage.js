@@ -4,8 +4,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-// @material-ui/icons
-
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -18,10 +16,12 @@ import Parallax from "components/Parallax/Parallax.js";
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
 
 // Sections for this page
-
-import TeamSection from "./Sections/TeamSection.js";
+import SectionCarousel from "../Components/Sections/SectionCarousel";
+//import TeamSection from "./Sections/TeamSection.js";
 
 import About from "../Components/Sections/About";
+import Values from "./Sections/Values";
+import Horizontal from "views/Components/Sections/Horizontal";
 
 const dashboardRoutes = [];
 
@@ -62,11 +62,17 @@ export default function AboutPage(props) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <About />
-        <div className={classes.container}>
-          <TeamSection />
-        </div>
       </div>
-      <Footer />
+      <div className={classes.container}>
+        <Values />
+      </div>
+      <div className="white">
+        <Horizontal />
+        <SectionCarousel />
+      </div>
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <Footer />
+      </div>
     </div>
   );
 }

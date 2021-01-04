@@ -46,7 +46,7 @@ export default function WhatWeDoPage(props) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={12} md={6}>
-              <h1 className={classes.title}>Why We Do What We Do</h1>
+              <h1 className={classes.title}>Contact Us</h1>
               <h4>
                 Every landing page needs a small description after the big bold
                 title, that{"'"}s why we added this text here. Add here all the
@@ -63,7 +63,9 @@ export default function WhatWeDoPage(props) {
           <TeamSection />
         </div>
       </div>
-      <Footer />
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <Footer />
+      </div>
     </div>
   );
 }

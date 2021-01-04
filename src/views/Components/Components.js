@@ -20,8 +20,15 @@ import SectionCarousel from "./Sections/SectionCarousel.js";
 import styles from "assets/jss/material-kit-react/views/components.js";
 
 //sections
-import About from "./Sections/About";
+//import About from "./Sections/About";
 import Cause from "./Sections/Cause";
+import Horizontal from "./Sections/Horizontal.js";
+//import TestimonialCard from "./Sections/TestimonialCard";
+import Testimonial from "./Sections/Testimonial.js";
+import Xyz from "./Sections/Xyz.js";
+import Blogs from "./Sections/Blogs.js";
+
+///import Logo from "../../assets/Images/logo.png";
 
 const useStyles = makeStyles(styles);
 
@@ -31,7 +38,6 @@ export default function Components(props) {
   return (
     <div>
       <Header
-        brand="Logo"
         rightLinks={<HeaderLinks />}
         fixed
         color="transparent"
@@ -53,6 +59,9 @@ export default function Components(props) {
                   minus at repellendus repellat dolorem esse placeat. Suscipit
                   culpa doloribus sed quaerat id.
                 </h3>
+                <button className="btn btn-large red hide-on-large-only">
+                  DONATE
+                </button>
               </div>
             </GridItem>
           </GridContainer>
@@ -60,12 +69,17 @@ export default function Components(props) {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <About />
+        <Horizontal />
+        <Xyz />
       </div>
       <Cause />
-
+      <Horizontal />
+      <Testimonial />
       <SectionCarousel />
-      <Footer />
+      <Blogs />
+      <div className={classNames(classes.main, classes.mainRaised)}>
+        <Footer styles={{ marginTop: 30 }} />
+      </div>
     </div>
   );
 }

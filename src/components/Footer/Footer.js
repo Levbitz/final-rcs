@@ -11,7 +11,10 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
 
+import { Credit } from "../InfoArea/Credit";
+
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
+import Horizontal from "views/Components/Sections/Horizontal";
 
 const useStyles = makeStyles(styles);
 
@@ -27,41 +30,111 @@ export default function Footer(props) {
     [classes.footerWhiteFont]: whiteFont,
   });
   return (
-    <footer className={footerClasses}>
-      <div className={classes.container}>
-        <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#" className={classes.block} target="_blank">
-                Levson of Levbitz
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#" className={classes.block} target="_blank">
-                About us
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#" className={classes.block} target="_blank">
-                Blog
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#" className={classes.block} target="_blank">
-                Licenses
-              </a>
-            </ListItem>
-          </List>
-        </div>
-        <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , made with{" "}
-          <Favorite className={classes.icon} /> by{" "}
-          <a href="#" className={aClasses} target="_blank">
-            levbitz
-          </a>{" "}
+    <div styles={{ marginTop: 100 }}>
+      <div className="container">
+        <div className="row">
+          <div className="col l6 s12">
+            <img
+              className="responsive-img"
+              src={require("assets/Images/logo.png")}
+              alt=""
+            />
+          </div>
+          <div className="col l4  s12 offset-l2 ">
+            <span>
+              <List className={classes.list}>
+                <ListItem className={classes.inlineBlock}>
+                  <a href="#" className={classes.block} target="_blank">
+                    <i class="fab fa-3x fa-facebook blue-text"></i>
+                  </a>
+                </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <a href="#" className={classes.block} target="_blank">
+                    <i className="fab fa-3x fa-whatsapp green-text"></i>
+                  </a>
+                </ListItem>
+
+                <ListItem className={classes.inlineBlock}>
+                  <a href="#" className={classes.block} target="_blank">
+                    <i className="fab fa-3x fa-youtube red-text"></i>
+                  </a>
+                </ListItem>
+                <ListItem className={classes.inlineBlock}>
+                  <a href="#" className={classes.block} target="_blank">
+                    <i className="fab fa-3x fa-linkedin-in blue-text"></i>
+                  </a>
+                </ListItem>
+              </List>
+            </span>
+          </div>
         </div>
       </div>
-    </footer>
+      <hr />
+
+      <div className="container"></div>
+      <div>
+        <footer className="page-footer  grey lighten-2">
+          <div className="container ">
+            <div className="row">
+              <div className="col l4  s12">
+                <h3 className="grey-text text-darken-4">
+                  When we empower to succeed , we all win
+                </h3>
+              </div>
+              <div className="col l3 offset-l1  s12">
+                <ul>
+                  <li>
+                    <a className="black-text text-lighten-3" href="#!">
+                      Jobs
+                    </a>
+                  </li>
+                  <li>
+                    <a className="black-text text-lighten-3" href="#!">
+                      News and Blogs
+                    </a>
+                  </li>
+                  <li>
+                    <a className="black-text text-lighten-3" href="#!">
+                      contact us
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col l3  offset-l1 s12">
+                <ul>
+                  <li>
+                    <a className="black-text text-lighten-3" href="#!">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a className="black-text text-lighten-3" href="#!">
+                      Cause
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="footer-copyright">
+            <div className="container">
+              <p className="left"> Lorem ipsum dolor sit amet.</p>
+              <p className="right black-text">
+                &copy; {1900 + new Date().getYear()} , made with{" "}
+                <Favorite className={classes.icon} /> by{" "}
+                <a
+                  href="https://levbitz.com/"
+                  className={aClasses}
+                  target="_blank"
+                >
+                  levbitz
+                </a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
   );
 }
 
