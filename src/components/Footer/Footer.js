@@ -10,6 +10,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
 import Favorite from "@material-ui/icons/Favorite";
+import { Link } from "react-router-dom";
 
 import { Credit } from "../InfoArea/Credit";
 
@@ -84,9 +85,9 @@ export default function Footer(props) {
               <div className="col l3 offset-l1  s12">
                 <ul>
                   <li>
-                    <a className="black-text text-lighten-3" href="#!">
+                    <Link className="black-text text-lighten-3" to="/jobs">
                       Jobs
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="black-text text-lighten-3" href="#!">
